@@ -1,0 +1,135 @@
+.page-container {
+  padding: 36rpx;
+}
+
+.page-container .lock_state{
+  margin-top: 150rpx;
+}
+
+.page-container .lock_state .circle {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  position: relative;
+margin-left: 165rpx;
+margin-bottom: 100rpx;
+  width: 330rpx;
+  height: 330rpx;
+  border-radius: 50%;
+  /* background-image: linear-gradient(114.1deg, #0095ff -0.6%, #4B92FE 99.1%); */
+}
+
+.page-container .lock_state .circle {
+  transition: background-image 3s ease;
+}
+
+.page-container .lock_state .circle.on {
+  background-image: linear-gradient(114.1deg, #76c6ff -0.6%, #4B92FE 99.1%);
+}
+
+.page-container .lock_state .circle.off {
+  background-image: linear-gradient(114.1deg, #FFA500 0%, #FF8C00 50%, #FF4500 100%);
+}
+
+.circle .circle_text {
+  font-size: 100rpx; /* Adjust size as needed */
+  color: white; /* Adjust color as needed */
+}
+
+.page-container .lock_state .circle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 6px); /* 留出边框宽度 */
+  height: calc(100% - 6px); /* 留出边框宽度 */
+  border: 3px solid transparent; /* 设置边框为透明 */
+  border-top-color: #F0F4FA; /* 设置顶部边框为蓝色 */
+  border-radius: 50%;
+  animation: border-rotate 2s linear infinite; /* 边框旋转动画 */
+}
+
+@keyframes border-rotate {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+.data-container {
+  margin-top: 36rpx;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 150rpx);
+  grid-gap: 36rpx;
+}
+
+.data-container .data-card {
+  position: relative;
+  background-color: #ffffff;
+  height: 180rpx;
+  box-shadow: #d6d6d6 0 0 10rpx;
+  border-radius: 36rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.data-container .data-card .data-card_icon {
+  position: absolute;
+  height: 72rpx;
+  width: 72rpx;
+  left: 40rpx;
+  top: 30rpx;
+}
+
+.data-container .data-card .data-card_text {
+  position: absolute;
+  bottom: 30rpx;
+  right: 15rpx;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.data-container .data-card .data-card_text .data-card_title {
+  font-size: 30rpx;
+  color: #7f7f7f;
+}
+
+.data-container .data-card .data-card_text .data-card_value {
+  font-size: 52rpx;
+  font-weight: bold;
+  color: #7f7f7f;
+}
+
+.data-container .data-card .data-card_icon_lock{
+  position: absolute;
+  top: 50rpx;
+  left: 50rpx;
+  height: 72rpx;
+  width: 72rpx;
+}
+
+.data-container .data-card .data-card_lock{
+  position: absolute;
+  top: 50rpx;
+  right: 50rpx;
+  font-size: 52rpx;
+   color: #7f7f7f
+}
+
+.page-container .data-container .password-input-container{
+   top: 40rpx;
+}
+
+.page-container .password-input-container .checkbutton{
+  margin-top: 50rpx;
+  margin-left: 60rpx;
+  padding: 6rpx 12rpx;
+  font-size: 20px;
+  align-items: center;
+  background-color: #76c6ff;
+  color: #7f7f7f;
+  min-width: 60rpx; /* 设置最小宽度 */
+  min-height: 80rpx; /* 设置最小高度 */
+}

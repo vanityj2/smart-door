@@ -1,0 +1,91 @@
+<!--index.wxml-->
+<view class="page-container">
+  <!-- 头部部分 -->
+  <view class="header-container">
+    <image src="/images/background.jpg" class="background-image"></image>
+  <view class="header-air">
+    <view>{{now.windDir}} {{now.windScale}}级</view>
+    <view>{{City}} {{County}}</view>
+  </view>
+  <view class="header-title">
+    <view>{{now.temp}}°<image class="picture" src="/images/airprector.png" mode=""/></view>
+    <view class="header-title-shidu">湿度 {{now.humidity}}%</view>
+  </view>
+  <view class="header-ad">
+  <view>今天天气真不错</view>
+  </view>
+  </view>
+  <!-- 数据部分 -->
+  <view class="data-container">
+  <!-- 温度 -->
+  <view class="data-card">
+    <image class="data-card_icon" src="/images/tem.png" />
+    <view class="data-card_text">
+      <view class="data-card_title">
+        温度
+      </view>
+      <view class="data-card_value">
+        <view>{{Temp}}℃</view>
+      </view>
+    </view>
+  </view>
+  <!-- 湿度 -->
+  <view class="data-card">
+    <image class="data-card_icon" src="/images/hum.png" />
+    <view class="data-card_text">
+      <view class="data-card_title">
+        湿度
+      </view>
+      <view class="data-card_value">
+        <view>{{Hum}}%</view>
+      </view>
+    </view>
+  </view>
+  <!-- 光照度 -->
+  <view class="data-card">
+    <image class="data-card_icon" src="/images/light.png" />
+    <view class="data-card_text">
+      <view class="data-card_title">
+        光照
+      </view>
+      <view class="data-card_value">
+        <view>{{Light}} Lx</view>
+      </view>
+    </view>
+  </view>
+  <!-- 客厅灯 -->
+  <view class="data-card">
+    <image class="data-card_icon" src="/images/led.png" />
+    <view class="data-card_text">
+      <view class="data-card_title">
+        灯
+      </view>
+      <view class="data-card_value">
+        <switch checked="{{LED}}" bindchange="onLedChange" color="#3d7ef9" />
+      </view>
+    </view>
+  </view>
+  <!-- 报警器 -->
+  <view class="data-card">
+    <image class="data-card_icon" src="/images/alarm.png" />
+    <view class="data-card_text">
+      <view class="data-card_title">
+        报警器
+      </view>
+      <view class="data-card_value">
+        <switch checked="{{Beep}}" bindchange="onBeepChange" color="#3d7ef9" />
+      </view>
+    </view>
+  </view>
+          <!-- 门锁  -->
+          <view class="data-card">
+	<navigator url="/pages/lock/lock">
+    <image class="data-card_icon_lock" src="/images/Lock.png" />
+    <view class="data-card_lock">
+     门锁
+    </view>
+	</navigator>
+  </view>
+</view> 
+
+</view>

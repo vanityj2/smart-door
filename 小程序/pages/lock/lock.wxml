@@ -1,0 +1,44 @@
+  <!-- index.wxml -->
+  <view>
+  <view class="page-container">
+        <!-- 头部部分 -->
+         <view class="lock_state">
+                   <view class="circle {{door_state === 0 ? 'off' : 'on'}}"  bindtap="onClickChange">
+                    <view class="circle_text">
+                      <text>{{door_state === 0 ? '关' : '开'}}</text>
+                     </view>
+                 </view>
+              </view>
+        <!-- 数据部分 -->
+        <view class="data-container">
+            <!-- 密码解锁 -->
+            <view class="data-card"  bindtap="showPasswordInput">
+                <image class="data-card_icon" src="/images/jianpan.png" />
+                <view class="data-card_text">
+                    <view class="data-card_title">密码解锁</view>
+                    <view class="data-card_value">
+                    </view>
+                </view>
+            </view>
+            <!-- 人脸解锁 -->
+            <view class="data-card">
+                <image class="data-card_icon" src="/images/renlian.png" />
+                <view class="data-card_text">
+                    <view class="data-card_title">人脸解锁</view>
+                    <view class="data-card_value">
+                    </view>
+                </view>
+            </view>
+            <view class="data-card" bindtap="startFingerprintAuthentication">
+                <image class="data-card_icon" src="/images/zhiwen.png" />
+                <view class="data-card_text">
+                    <view class="data-card_title">指纹解锁</view>
+                    </view>
+      </view>
+      <view wx:if="{{isPasswordInputVisible}}" class="password-input-container">
+  <input type="password" placeholder="输入密码" bindinput="inputChange" focus="{{isPasswordInputFocused}}"  placeholder-style="font-size: 12px;"/>
+  <button bindtap="checkPassword" class="checkbutton">确认</button>
+</view>
+    </view>
+  </view>
+</view>

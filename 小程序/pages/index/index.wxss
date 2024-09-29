@@ -1,0 +1,108 @@
+/* *index.wxss* */
+.page-container{
+  padding: 36rpx; 
+}
+
+.header-container{
+  position: relative;
+  color: #ffffff;
+  border-radius: 36rpx;
+  padding: 32rpx 64rpx;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 30rpx;
+}
+
+.header-container .header-air{
+    display: flex;
+    justify-content: space-between;
+    font-size: 28rpx;
+}
+
+.header-container .header-title{
+  display: flex;
+  justify-content: space-between;
+  font-size: 64rpx;
+}
+
+.header-title-shidu{
+  font-size: 50rpx;
+}
+
+.header-title  .picture{
+  width: 50rpx;
+  height: 50rpx;
+}
+.header-container .header-ad{
+  margin-top: 36rpx;
+  font-size: 24rpx;
+}
+
+.data-container{
+  margin-top: 36rpx;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill,300rpx);
+  grid-gap: 36rpx;
+}
+
+.data-container .data-card {
+  position: relative;
+  background-color: #ffffff;
+  height: 180rpx;
+  box-shadow: #d6d6d6 0 0 10rpx;
+  border-radius: 36rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.data-container .data-card .data-card_icon {
+  position: absolute;
+  height: 72rpx;
+  width: 72rpx;
+  left: 40rpx;
+  top: 50rpx;
+}
+
+.data-container .data-card .data-card_text {
+  position: absolute;
+  top: 36rpx;
+  right: 24rpx;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.data-container .data-card  .data-card_text .data-card_title{
+  font-size: 30rpx;
+  color: #7f7f7f;
+}
+
+.data-container .data-card .data-card_text .data-card_value{
+  font-size: 52rpx;
+  font-weight: bold;
+  color: #7f7f7f;
+}
+
+.data-container .data-card .data-card_icon_lock{
+  position: absolute;
+  top: 50rpx;
+  left: 50rpx;
+  height: 72rpx;
+  width: 72rpx;
+}
+
+.data-container .data-card .data-card_lock{
+  position: absolute;
+  top: 50rpx;
+  right: 50rpx;
+  font-size: 52rpx;
+   color: #7f7f7f
+}

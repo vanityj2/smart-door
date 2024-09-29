@@ -1,0 +1,30 @@
+<view class="page-container">
+  <view class="user-info">
+  <image class="avatar" src="{{pic}}" />
+  <view class="name">{{name}}</view>
+</view>
+<view class="lunbotu">
+<swiper indicator-dots="true" circular="true" interval="{{5000}}" autoplay="{{true}}">
+  <swiper-item>
+    <image src="/images/chongyou1.jpg" style="object-fit: contain; width: 100%; height: 100%;"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="/images/chongyou2.jpg" style="object-fit: contain; width: 100%; height: 100%;"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="/images/chongyou3.jpg" mode="" style="object-fit: contain; width: 100%; height: 100%;"/>
+  </swiper-item>
+</swiper>
+</view>
+
+<view class="help-container">
+<view class="feedback-help" bindtap="showMessage">
+    <image class="xiaoxi" src="/images/message.png"/>
+    <text>帮助与反馈</text>
+</view>
+</view>
+<view class="anniu">
+  <button wx:if="{{showButton}}" bindtap="getuser">获取用户信息</button>
+</view>
+
+</view>
